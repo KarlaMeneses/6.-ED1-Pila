@@ -18,7 +18,6 @@
 #include "UPilalistamemoria.h"
 
 #include "UListamemoria.h"
-#include "UPilapuntero.h"
 
 using namespace std;
 
@@ -26,7 +25,6 @@ using namespace std;
 //o Implementación con Vectores
 //o Implementación con Simulación de Memoria/Punterosvoid menu1();
 void mostrar(PilaLSM* p);
-void invertir(PilaP* &k);
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -47,9 +45,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	cout<<p->mostrar()<<endl;//al mostrar la pila se borra la lista
 	*/
 
+	/*
+	{PILA LISTA VECTOR}
 
-	//{PILA LISTA VECTOR}
-  /*
 	PilaLV* p=new PilaLV();
 	p->Meter(30);
 	p->Meter(50);
@@ -59,7 +57,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	p->Meter(62);
 	cout<<"Cima: "<<p->cima()<<endl;
 	cout<<p->mostrar()<<endl;//al mostrar la pila se borra la lista
-	 */
+	*/
 
 
 	//{PILA LISTA CON SIMULACION DE MEMORIA}
@@ -99,23 +97,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	cout<<"Cima: "<<p->cima()<<endl;
 	cout<<p->mostrar()<<endl;
 	*/
-  //	menu1();
-
-	PilaP* p=new PilaP();
-	p->meter(11);
-	p->meter(10);
-	p->meter(100);
-	p->meter(800);
-	//p->meter(75);
-	//cout<<p->to_str()<<endl;
-	invertir(p);
-	//cout<<p->to_str()<<endl;
-//	cout<<"2:  "<<p->SEGUNDOMAYOR(p)<<endl;
-//	p->meter(100);
-//	p->meter(142);
-//	cout<<"2:  "<<p->SEGUNDOMAYOR(p)<<endl;
-//	cout<<p->to_str()<<endl;
-
+	menu1();
 	system("pause");
 	return 0;
 }
@@ -169,24 +151,4 @@ void mostrar(PilaLSM* p){
 	k += "||||||||||\n";
 	cout<<"   PILA\n"+k<<endl;
 }
-
-void invertir(PilaP* &k){
-	PilaP* aux= new PilaP();
-	int ebx;
-	int E;
-	int s;
-	k->sacar(s);
-	while (!k->vacia()){
-		k->sacar(E);
-		aux->meter(E);
-	}
-	aux->sacar(ebx);
-	k->meter(s);
-	while (!aux->vacia()){
-		aux->sacar(E);
-		k->meter(E);
-	}
-	k->meter(ebx);
-}
-
 

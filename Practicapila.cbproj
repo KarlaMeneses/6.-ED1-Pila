@@ -156,6 +156,10 @@
             <DependentOn>UPilamemoria.h</DependentOn>
             <BuildOrder>9</BuildOrder>
         </CppCompile>
+        <CppCompile Include="UPilapuntero.cpp">
+            <DependentOn>UPilapuntero.h</DependentOn>
+            <BuildOrder>11</BuildOrder>
+        </CppCompile>
         <CppCompile Include="UPilavector.cpp">
             <DependentOn>UPilavector.h</DependentOn>
             <BuildOrder>10</BuildOrder>
